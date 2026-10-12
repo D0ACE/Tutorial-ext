@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Learning & Project Analyzer",
+  "version": "1.0.0",
+  "description": "Analyze a YouTube video's transcript to identify technologies taught and projects built.",
+  "permissions": ["storage", "tabs"],
+  "host_permissions": ["http://127.0.0.1:8765/*", "http://localhost:8765/*"],
+  "action": {
+    "default_title": "Analyze YouTube video",
+    "default_popup": "popup.html"
+  }
+}

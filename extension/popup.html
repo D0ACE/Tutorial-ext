@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>YouTube Learning Analyzer</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main>
+    <div class="brand">
+      <div class="logo">▶</div>
+      <div><h1>Video Learning Analyzer</h1><p>Find the tech stack and project from a tutorial</p></div>
+    </div>
+    <label for="videoUrl">Current video page link</label>
+    <input id="videoUrl" type="url" placeholder="https://www.youtube.com/watch?v=..." autocomplete="url">
+    <button id="analyze">Analyze full transcript</button>
+    <p id="status" role="status">Backend must be running on this computer.</p>
+    <section id="result" hidden>
+      <h2 id="videoTitle"></h2>
+      <p id="notTutorial" class="not-tutorial" hidden><strong>🚫 Nah bro, it is not an tutorial</strong></p>
+      <div class="section"><h3>🧰 Technologies learned</h3><ul id="technologies"></ul></div>
+      <div class="section"><h3>🚀 Project being built</h3><p id="project"></p></div>
+      <div class="section"><h3>📚 What the video covers</h3><ul id="topics"></ul></div>
+      <div class="section"><h3>📝 Transcript notes</h3><p id="notes"></p></div>
+      <details><summary>View transcript</summary><pre id="transcript"></pre></details>
+    </section>
+    <footer>Transcript availability depends on captions provided by YouTube.</footer>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>
